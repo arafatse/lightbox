@@ -1,6 +1,5 @@
 var
-  il=350,
-  ir=350,
+  i = 0,
   body = document.getElementsByTagName('body')[0],
   holoimg = document.getElementsByClassName("holoimg"),
   modal = document.getElementsByClassName("modal")[0],
@@ -19,15 +18,13 @@ window.onclick = function(e){
 };
 
 function toLeft(){
-  if(il==350){ir=350}
-  modalContent.style.transform = "translate("+il+"px"+")";
-  console.log(il)
+  i+=350;
+  modalContent.style.transform = "translate("+i+"px"+")";
 };
 
 function toRight(){
-if(ir==350){il=350}
-  modalContent.style.transform = "translate("+-ir+"px"+")";
-  console.log(ir)
+  i-=350;
+    modalContent.style.transform = "translate("+i+"px"+")";
 };
 arrowRight.onmouseover = function(){toRight();};
 arrowRight.onclick = function(){toRight();};
@@ -49,8 +46,9 @@ modalContent.onclick = function(e){
       modal.style.diplay = "none";
 };
 
-fullModal.ondblclick = function(){
+fullModal.ondblclick = function(e){
   fullModal.style.display = "none";
+  e.target.style.display = "none";
   arrowLeft.style.display= "block";
   arrowRight.style.display= "block";
   modal.style.display = "flex";

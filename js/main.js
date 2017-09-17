@@ -7,10 +7,13 @@ var
   fullModal = document.getElementsByClassName("full-modal")[0],
   arrowLeft = document.getElementsByClassName("prev")[0],
   arrowRight = document.getElementsByClassName("next")[0];
-// body.classList.add('loaded');
+
 body.onkeyup =function(e){
   if(e.keyCode == 122 || e.keyCode == 27) body.classList.add('loaded');
 };
+if(window.screen.width < 370){
+   body.classList.add('loaded');
+}
 
 holoimg[0].onclick = function(){
   modal.style.display="flex";

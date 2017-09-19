@@ -38,7 +38,7 @@ function toRight(){
 arrowRight.onclick = function(){toRight();};
 // arrowLeft.onmouseover = function(){toLeft();};
 arrowLeft.onclick = function(){toLeft();};
-modalContent.onwheel = function(e){
+window.onwheel = function(e){
   if(e.deltaY > 0){toRight()};
   if(e.deltaY < 0){toLeft()};
 };

@@ -1,4 +1,4 @@
-window.onload = function(){
+
   var
     i = 0,
     body = document.getElementsByTagName('body')[0],
@@ -169,5 +169,3 @@ window.onload = function(){
   //   modalContent.style.transform = "translate("+(e.alpha*-50)+"px"+")";
   //   modalContent2.style.transform = "translate("+(e.alpha*-50)+"px"+")";
   // });
-
-}

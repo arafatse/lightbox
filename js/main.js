@@ -15,7 +15,7 @@
 
 
 
-  // body.classList.add('loaded');
+  body.classList.add('loaded');
 
 
   holoimg[0].onclick = function(){
